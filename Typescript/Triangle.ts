@@ -2,9 +2,9 @@
 * The HelloWorld program implements an application that
 * simply displays "Hello World!" to the standard output.
 *
-* By:      Mr. Coxall
+* By:      Evan Beaudoin
 * Version: 1.0
-* Since:   2020-01-01
+* Since:   2024-04-25
 */ 
 
 export class Triangle {
@@ -87,6 +87,27 @@ export class Triangle {
           throw new Error("Invalid angle number. Angle number must be 1, 2, or 3.");
       }
   }
+  
+  public height(sideNumber: number): number {
+        if (sideNumber === 1) {
+            return (2 * this.area()) / this.sideA;
+        } else if (sideNumber === 2) {
+            return (2 * this.area()) / this.sideB;
+        } else if (sideNumber === 3) {
+            return (2 * this.area()) / this.sideC;
+        } else {
+            throw new Error("Invalid side number. Side number must be 1, 2, or 3.");
+        }
+    }
+
+    public innerCircleRadius(): number {
+        const s = this.semiPerimeter();
+        return this.area() / s;
+    }
+
+    public circumsicleRadius(): number {
+        return (this.sideA * this.sideB * this.sideC) / (4 * this.area());
+    }
 }
 
 
