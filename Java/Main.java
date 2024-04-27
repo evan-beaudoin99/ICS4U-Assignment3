@@ -108,4 +108,5 @@ final class Main {
         System.out.println(" → Circumcircle radius: " + String.format("%.4f", testTriangle3.circumsicleRadius()) + " mm");
         System.out.println();
 
+ }
 }
