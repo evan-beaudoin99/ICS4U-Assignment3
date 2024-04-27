@@ -8,10 +8,8 @@
 
 /**
  * This is the class for Triangle.
- * Make class Triangle.
  */
-
-public class Triangle {
+final class Triangle {
     /**
      * This is the first side.
      */
@@ -75,7 +73,7 @@ public class Triangle {
      *
      * @return false this is false.
      */
-    public boolean isTriangleValid() {
+    public boolean isValid() {
         final boolean valid;
         if (this.sideA + this.sideB <= this.sideC
             || this.sideB + this.sideC <= this.sideA
@@ -92,7 +90,7 @@ public class Triangle {
      *
      * @return this.shape Returns the shape.
      */
-    public String triangleName() {
+    public String getType() {
         final String shape;
         if (!this.isTriangleValid()) {
             shape = "-1";
@@ -134,7 +132,7 @@ public class Triangle {
      *
      * @return this is the semierimeter.
      */
-    public double semiperimeter() {
+    public double semiPerimeter() {
         final double semiperimeter;
         if (!this.isTriangleValid()) {
             semiperimeter = -1;
@@ -169,7 +167,7 @@ public class Triangle {
      * @param side this is the side.
      * @return this returns the angles
      */
-    public double angles(int side) {
+    public double angle(int side) {
         final double radian;
         final int total = 3;
         if (!this.isTriangleValid()) {
@@ -233,7 +231,7 @@ public class Triangle {
      *
      * @return This returns the circumRadius.
      */
-    public double circumRadiusTriangle() {
+    public double circumsicleRadius() {
         final double circumRadius;
         if (!this.isTriangleValid()) {
             circumRadius = -1;
@@ -242,13 +240,5 @@ public class Triangle {
                    / (2 * 2 * this.area());
         }
         return circumRadius;
-    }
-
-    /**
-     * This is the status.
-     */
-    public void status() {
-        System.out.println("\nTriangle Validity Status: "
-                        + this.isTriangleValid());
     }
 }
