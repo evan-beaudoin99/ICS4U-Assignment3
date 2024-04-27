@@ -46,7 +46,7 @@ class Triangle {
 
   // This is where the triangle name is created
   getType(): string {
-    if (!this.isTriangleValid()) {
+    if (!this.isValid()) {
       const shape = '-1'
       return shape
     } else if (this.sideA === this.sideB && this.sideB === this.sideC) {
@@ -74,7 +74,7 @@ class Triangle {
 
   // This is where the perimeter is calculated
   private perimeter(): number {
-    if (!this.isTriangleValid()) {
+    if (!this.isValid()) {
       const perimeter = -1
       return perimeter
     } else {
@@ -85,7 +85,7 @@ class Triangle {
 
   // This calculates the semiperimeter of the triangle
   semiperimeter(): number {
-    if (!this.isTriangleValid()) {
+    if (!this.isValid()) {
       const semiperimeter = -1
       return semiperimeter
     } else {
@@ -96,7 +96,7 @@ class Triangle {
 
   // This is where the area of the triangle is calculated
   area(): number {
-    if (!this.isTriangleValid()) {
+    if (!this.isValid()) {
       const area = -1
       return area
     } else {
@@ -113,7 +113,7 @@ class Triangle {
 
   // This calculates angles of the triangle
   angle(side: number): number {
-    if (!this.isTriangleValid()) {
+    if (!this.isValid()) {
       const angle = -1
       return angle
     } else {
@@ -140,7 +140,7 @@ class Triangle {
 
   // This calculates the height of the triangle
   height(side: number): number {
-    if (!this.isTriangleValid()) {
+    if (!this.isValid()) {
       const height = -1
       return height
     } else {
@@ -159,7 +159,7 @@ class Triangle {
 
   // this calculates the innerCircle radius of the triangle
   innerCircleRadius(): number {
-    if (!this.isTriangleValid()) {
+    if (!this.isValid()) {
       const innerCircle = -1
       return innerCircle
     } else {
@@ -170,7 +170,7 @@ class Triangle {
 
   // this calculates the circumRadius of the triangle
   circumRadiusTriangle(): number {
-    if (!this.isTriangleValid()) {
+    if (!this.isValid()) {
       const circumRadius = -1
       return circumRadius
     } else {
