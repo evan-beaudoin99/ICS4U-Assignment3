@@ -148,7 +148,7 @@ final class Triangle {
     * @return this is the area.
     */
     public double area() {
-        final double semiperimeter = semiperimeter();
+        final double semiPerimeter = semiPerimeter();
         final double area;
         if (!this.isValid()) {
             area = -1;
