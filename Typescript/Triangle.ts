@@ -89,7 +89,7 @@ class Triangle {
       const semiperimeter = -1
       return semiperimeter
     } else {
-      const semiperimeter = this.trianglePerimeter() / 2
+      const semiperimeter = this.perimeter() / 2
       return semiperimeter
     }
   }
