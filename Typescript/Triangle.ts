@@ -7,7 +7,7 @@
  * Since:   2024-04-25
  */
 
-export class Triangle {
+class Triangle {
   private sideA: number
   private sideB: number
   private sideC: number
@@ -84,13 +84,8 @@ export class Triangle {
   }
 
   // This calculates the semiperimeter of the triangle
-<<<<<<< HEAD
-  semiPerimeter(): number {
-    if (!this.isTriangleValid()) {
-=======
   semiperimeter(): number {
     if (!this.isValid()) {
->>>>>>> 8de6790bc0486d4ed741e255b7ccd163d0866253
       const semiperimeter = -1
       return semiperimeter
     } else {
