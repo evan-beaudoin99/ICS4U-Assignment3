@@ -145,7 +145,7 @@ export class Triangle {
       return height
     } else {
       let height: number
-      const area: number = this.triangleArea()
+      const area: number = this.area()
       if (side === 1) {
         height = (2 * area) / this.sideA
       } else if (side === 2) {
@@ -163,7 +163,7 @@ export class Triangle {
       const innerCircle = -1
       return innerCircle
     } else {
-      const innerCircle = this.triangleArea() / this.semiPerimeter()
+      const innerCircle = this.area() / this.semiPerimeter()
       return innerCircle
     }
   }
@@ -175,7 +175,7 @@ export class Triangle {
       return circumRadius
     } else {
       const circumRadius =
-        (this.sideA * this.sideB * this.sideC) / (4 * this.triangleArea())
+        (this.sideA * this.sideB * this.sideC) / (4 * this.area())
       return circumRadius
     }
   }
