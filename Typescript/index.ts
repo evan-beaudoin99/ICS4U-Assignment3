@@ -1,4 +1,4 @@
-import Triangle from './Triangle'
+import { Triangle } from './Triangle'
 
 console.log('')
 
