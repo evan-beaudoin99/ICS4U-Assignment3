@@ -100,7 +100,7 @@ export class Triangle {
       const area = -1
       return area
     } else {
-      const semiperimeterArea = this.triangleSemiperimeter()
+      const semiperimeterArea = this.semiPerimeter()
       const area = Math.sqrt(
         semiperimeterArea *
           (semiperimeterArea - this.sideA) *
@@ -163,7 +163,7 @@ export class Triangle {
       const innerCircle = -1
       return innerCircle
     } else {
-      const innerCircle = this.triangleArea() / this.triangleSemiperimeter()
+      const innerCircle = this.triangleArea() / this.semiPerimeter()
       return innerCircle
     }
   }
