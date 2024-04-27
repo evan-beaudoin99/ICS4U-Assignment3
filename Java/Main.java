@@ -13,31 +13,6 @@
 */
 final class Main {
     /**
-     * Constants.
-     */
-    public static final int THREE = 3;
-
-    /**
-     * Constants.
-     */
-    public static final String POINTMM = "%.4f cm²";
-
-     /**
-     * Constants.
-     */
-    public static final String RAD = "%.4f rad";
-
-     /**
-     * Constants.
-     */
-    public static final String CM = "%.4f cm";
-
-    /**
-     * Constants.
-     */
-    public static final String CENI = " cm";
-
-    /**
     * Prevent instantiation.
     * Throw an exception IllegalStateException.
     * if this ever is called
