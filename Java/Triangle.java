@@ -98,15 +98,15 @@ final class Triangle {
             if (sideA == sideB && sideB == sideC) {
                 shape = "Equilateral Triangle";
             } else if (sideA == sideB || sideB == sideC || sideA == sideC) {
-                shape = "Isoceles Triangle!";
+                shape = "Isoceles Triangle";
             } else if (
                     sideA * sideA + sideB * sideB == sideC * sideC
                     || sideC * sideC + sideB * sideB == sideA * sideA
                     || sideC * sideC + sideA * sideA == sideB * sideB
             ) {
-                shape = "Right Angle Triangle!";
+                shape = "Right Angle Triangle";
             } else {
-                shape = "Scalene Triangle!";
+                shape = "Scalene Triangle";
             }
         }
         return shape;
@@ -162,7 +162,7 @@ final class Triangle {
     }
 
     /**
-     * This is the angles.
+     * This calculates the angles.
      *
      * @param side this is the side.
      * @return this returns the angles
@@ -188,7 +188,7 @@ final class Triangle {
     }
 
     /**
-     * This is the heights of the triangle.
+     * This calculates the height of the triangle.
      *
      * @param side the sides.
      * @return returns the height.
@@ -212,7 +212,7 @@ final class Triangle {
     }
 
     /**
-     * This is the inner innerCircle.
+     * This calculates the inner circle radius.
      *
      * @return this returns the innerCircle.
      */
@@ -227,7 +227,7 @@ final class Triangle {
     }
 
     /**
-     * This is the circumRadius.
+     * This calculates the circumRadius.
      *
      * @return This returns the circumRadius.
      */
