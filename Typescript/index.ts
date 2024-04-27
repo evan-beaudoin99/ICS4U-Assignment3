@@ -1,3 +1,12 @@
+/**
+ * This is the main program
+ * for the triangle class
+ *
+ * By:    Evan Beaudoin
+ * Version: 1.0
+ * Since:   2024-04-25
+ */
+
 import { Triangle } from './Triangle'
 
 console.log('')
