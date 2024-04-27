@@ -69,7 +69,7 @@ final class Triangle {
     }
 
     /**
-     * This is the isTriangleValid function.
+     * This is the isValid function.
      *
      * @return false this is false.
      */
@@ -92,7 +92,7 @@ final class Triangle {
      */
     public String getType() {
         final String shape;
-        if (!this.isTriangleValid()) {
+        if (!this.isValid()) {
             shape = "-1";
         } else {
             if (sideA == sideB && sideB == sideC) {
@@ -119,7 +119,7 @@ final class Triangle {
      */
     private double perimeter() {
         final double perimeter;
-        if (!this.isTriangleValid()) {
+        if (!this.isValid()) {
             perimeter = -1;
         } else {
             perimeter = this.sideA + this.sideC + this.sideB;
@@ -134,7 +134,7 @@ final class Triangle {
      */
     public double semiPerimeter() {
         final double semiperimeter;
-        if (!this.isTriangleValid()) {
+        if (!this.isValid()) {
             semiperimeter = -1;
         } else {
             semiperimeter = perimeter() / 2;
@@ -150,7 +150,7 @@ final class Triangle {
     public double area() {
         final double semiperimeter = semiperimeter();
         final double area;
-        if (!this.isTriangleValid()) {
+        if (!this.isValid()) {
             area = -1;
         } else {
             area = Math.sqrt(semiperimeter
@@ -170,7 +170,7 @@ final class Triangle {
     public double angle(int side) {
         final double radian;
         final int total = 3;
-        if (!this.isTriangleValid()) {
+        if (!this.isValid()) {
             radian = -1;
         } else {
             final double[] angles = {
@@ -197,7 +197,7 @@ final class Triangle {
         final double height;
         final int total = 3;
         final double area = area();
-        if (!this.isTriangleValid()) {
+        if (!this.isValid()) {
             height = -1;
         } else {
             final double[] heightMeasure = {
@@ -218,7 +218,7 @@ final class Triangle {
      */
     public double innerCircleRadius() {
         final double innerCircle;
-        if (!this.isTriangleValid()) {
+        if (!this.isValid()) {
             innerCircle = -1;
         } else {
             innerCircle = this.area() / this.semiperimeter();
@@ -233,7 +233,7 @@ final class Triangle {
      */
     public double circumsicleRadius() {
         final double circumRadius;
-        if (!this.isTriangleValid()) {
+        if (!this.isValid()) {
             circumRadius = -1;
         } else {
             circumRadius = (this.sideA * this.sideB * this.sideC)
