@@ -35,11 +35,15 @@ export class Triangle {
   }
 
   public isValid(): boolean {
-      return (
-          this.sideA + this.sideB > this.sideC &&
-          this.sideB + this.sideC > this.sideA &&
-          this.sideA + this.sideC > this.sideB
-      );
+    if (
+      this.sideA + this.sideB <= this.sideC ||
+      this.sideB + this.sideC <= this.sideA ||
+      this.sideA + this.sideC <= this.sideB
+    ) {
+      return false
+    } else {
+      return true
+    }
   }
 
   public semiPerimeter(): number {
