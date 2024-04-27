@@ -128,18 +128,18 @@ final class Triangle {
     }
 
     /**
-     * This is the semiperimeter.
+     * This is the semiPerimeter.
      *
      * @return this is the semierimeter.
      */
     public double semiPerimeter() {
-        final double semiperimeter;
+        final double semiPerimeter;
         if (!this.isValid()) {
-            semiperimeter = -1;
+            semiPerimeter = -1;
         } else {
-            semiperimeter = perimeter() / 2;
+            semiPerimeter = perimeter() / 2;
         }
-        return semiperimeter;
+        return semiPerimeter;
     }
 
     /**
@@ -153,10 +153,10 @@ final class Triangle {
         if (!this.isValid()) {
             area = -1;
         } else {
-            area = Math.sqrt(semiperimeter
-                        * (semiperimeter - this.sideA)
-                        * (semiperimeter - this.sideB)
-                        * (semiperimeter - this.sideC));
+            area = Math.sqrt(semiPerimeter
+                        * (semiPerimeter - this.sideA)
+                        * (semiPerimeter - this.sideB)
+                        * (semiPerimeter - this.sideC));
         }
         return area;
     }
@@ -221,7 +221,7 @@ final class Triangle {
         if (!this.isValid()) {
             innerCircle = -1;
         } else {
-            innerCircle = this.area() / this.semiperimeter();
+            innerCircle = this.area() / this.semiPerimeter();
         }
         return innerCircle;
     }
