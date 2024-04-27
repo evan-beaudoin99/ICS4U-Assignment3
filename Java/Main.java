@@ -7,36 +7,33 @@
 * @since   2024-04-24
 */
 
-import java.util.Scanner;
+
 /**
- * This is the main Triangle Class.
- * Class Main
- */
-
+* This is the main Triangle Class.
+*/
 final class Main {
-
     /**
-     * This is 3.
+     * Constants.
      */
     public static final int THREE = 3;
 
     /**
-     * This is %.4f.
+     * Constants.
      */
     public static final String POINTMM = "%.4f cm²";
 
-    /**
-     * This is another.
+     /**
+     * Constants.
      */
     public static final String RAD = "%.4f rad";
 
-    /**
-     * This is another.
+     /**
+     * Constants.
      */
     public static final String CM = "%.4f cm";
 
     /**
-     * This is cm.
+     * Constants.
      */
     public static final String CENI = " cm";
 
@@ -48,7 +45,6 @@ final class Main {
     * @throws IllegalStateException if called
     *
     */
-
     private Main() {
         throw new IllegalStateException("Cannot be instantiated");
 
@@ -59,74 +55,57 @@ final class Main {
     *
     * @param args No args will be used
     */
-
     public static void main(final String[] args) {
 
-        final Scanner firstInput = new Scanner(System.in);
-        final Scanner secondInput = new Scanner(System.in);
-        final Scanner thirdInput = new Scanner(System.in);
+       // Test Triangle 1
+        Triangle testTriangle1 = new Triangle(3, 4, 5);
+        System.out.println("Created a 3 mm by 4 mm by 5 mm triangle.");
+        System.out.println(" → Is the triangle valid: " + testTriangle1.isValid());
+        System.out.println(" → Semiperimeter: " + String.format("%.4f", testTriangle1.semiPerimeter()) + " mm");
+        System.out.println(" → Area: " + String.format("%.4f", testTriangle1.area()) + " mm²");
+        System.out.println(" → Type: " + testTriangle1.getType());
+        System.out.println(" → Angle 1: " + String.format("%.4f", testTriangle1.angle(1)) + " rad");
+        System.out.println(" → Angle 2: " + String.format("%.4f", testTriangle1.angle(2)) + " rad");
+        System.out.println(" → Angle 3: " + String.format("%.4f", testTriangle1.angle(3)) + " rad");
+        System.out.println(" → Height 1: " + String.format("%.4f", testTriangle1.height(1)) + " mm");
+        System.out.println(" → Height 2: " + String.format("%.4f", testTriangle1.height(2)) + " mm");
+        System.out.println(" → Height 3: " + String.format("%.4f", testTriangle1.height(3)) + " mm");
+        System.out.println(" → Inner circle radius: " + String.format("%.4f", testTriangle1.innerCircleRadius()) + " mm");
+        System.out.println(" → Circumcircle radius: " + String.format("%.4f", testTriangle1.circumsicleRadius()) + " mm");
+        System.out.println();
 
-        try {
+        // Test Triangle 2
+        Triangle testTriangle2 = new Triangle(3, 3, 3);
+        System.out.println("Created a 3 mm by 3 mm by 3 mm triangle.");
+        System.out.println(" → Is the triangle valid: " + testTriangle2.isValid());
+        System.out.println(" → Semiperimeter: " + String.format("%.4f", testTriangle2.semiPerimeter()) + " mm");
+        System.out.println(" → Area: " + String.format("%.4f", testTriangle2.area()) + " mm²");
+        System.out.println(" → Type: " + testTriangle2.getType());
+        System.out.println(" → Angle 1: " + String.format("%.4f", testTriangle2.angle(1)) + " rad");
+        System.out.println(" → Angle 2: " + String.format("%.4f", testTriangle2.angle(2)) + " rad");
+        System.out.println(" → Angle 3: " + String.format("%.4f", testTriangle2.angle(3)) + " rad");
+        System.out.println(" → Height 1: " + String.format("%.4f", testTriangle2.height(1)) + " mm");
+        System.out.println(" → Height 2: " + String.format("%.4f", testTriangle2.height(2)) + " mm");
+        System.out.println(" → Height 3: " + String.format("%.4f", testTriangle2.height(3)) + " mm");
+        System.out.println(" → Inner circle radius: " + String.format("%.4f", testTriangle2.innerCircleRadius()) + " mm");
+        System.out.println(" → Circumcircle radius: " + String.format("%.4f", testTriangle2.circumsicleRadius()) + " mm");
+        System.out.println();
 
-            System.out.println("Enter your triangles sides(cm)");
-            System.out.print("Enter your first side: ");
-            final double sideA = firstInput.nextInt();
-            System.out.print("Enter your second side: ");
-            final double sideB = secondInput.nextInt();
-            System.out.print("Enter your third side: ");
-            final double sideC = thirdInput.nextInt();
+        // Test Triangle 3
+        Triangle testTriangle3 = new Triangle(3, 4, 4);
+        System.out.println("Created a 3 mm by 4 mm by 4 mm triangle.");
+        System.out.println(" → Is the triangle valid: " + testTriangle3.isValid());
+        System.out.println(" → Semiperimeter: " + String.format("%.4f", testTriangle3.semiPerimeter()) + " mm");
+        System.out.println(" → Area: " + String.format("%.4f", testTriangle3.area()) + " mm²");
+        System.out.println(" → Type: " + testTriangle3.getType());
+        System.out.println(" → Angle 1: " + String.format("%.4f", testTriangle3.angle(1)) + " rad");
+        System.out.println(" → Angle 2: " + String.format("%.4f", testTriangle3.angle(2)) + " rad");
+        System.out.println(" → Angle 3: " + String.format("%.4f", testTriangle3.angle(3)) + " rad");
+        System.out.println(" → Height 1: " + String.format("%.4f", testTriangle3.height(1)) + " mm");
+        System.out.println(" → Height 2: " + String.format("%.4f", testTriangle3.height(2)) + " mm");
+        System.out.println(" → Height 3: " + String.format("%.4f", testTriangle3.height(3)) + " mm");
+        System.out.println(" → Inner circle radius: " + String.format("%.4f", testTriangle3.innerCircleRadius()) + " mm");
+        System.out.println(" → Circumcircle radius: " + String.format("%.4f", testTriangle3.circumsicleRadius()) + " mm");
+        System.out.println();
 
-            if (sideA <= 0 || sideB <= 0 || sideC <= 0) {
-                System.out.println("Invalid Input, Number to small!");
-            } else {
-
-                // this is a triangle program
-                final Triangle triangle = new Triangle(sideA, sideB, sideC);
-
-                triangle.status();
-
-                System.out.println("\nThe three sides were");
-                System.out.println("Side A ---> " + triangle.getSideA() + CENI);
-                System.out.println("Side B ---> " + triangle.getSideB() + CENI);
-                System.out.println("Side C ---> " + triangle.getSideC() + CENI);
-
-                System.out.println("The shape is a " + triangle.triangleName());
-
-                System.out.println("The semiperimeter is "
-                                + triangle.semiperimeter() + CENI);
-
-                System.out.println("The area is " + String.format(POINTMM,
-                                        triangle.area()));
-
-                System.out.println("Angle A is " + String.format(RAD,
-                                        triangle.angles(2)));
-                System.out.println("Angle B is " + String.format(RAD,
-                                        triangle.angles(THREE)));
-                System.out.println("Angle C is " + String.format(RAD,
-                                        triangle.angles(1)));
-
-                System.out.println("The height of side A is "
-                                + String.format(CM,
-                                        triangle.height(1)));
-                System.out.println("The height of side B is "
-                                + String.format(CM,
-                                        triangle.height(2)));
-                System.out.println("The height of side C is "
-                                + String.format(CM,
-                                        triangle.height(THREE)));
-
-                System.out.println("The inner circle radius is "
-                                + String.format(CM,
-                                        triangle.innerCircleRadius()));
-
-                System.out.println("The circum circle radius is "
-                                + String.format(CM,
-                                        triangle.circumRadiusTriangle()));
-
-            }
-        } catch (java.util.InputMismatchException ex) {
-            System.out.println("Invalid Input");
-        }
-        System.out.println("\nDone");
-    }
 }
